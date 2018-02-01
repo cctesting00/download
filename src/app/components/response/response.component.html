@@ -1,0 +1,81 @@
+<br />
+<div class="container">
+    <form>
+      <input type="text" class="form-control" [(ngModel)]="res" name="res" placeholder="res..">
+    </form>
+</div>
+<!-- button to add new company -->
+<div class="container my-2">
+  <div class="row">
+    <div class="col-md-3">
+      <button class="btn btn-primary btn-block">Add Company</button>
+    </div>
+  </div><!-- .row -->
+</div><!-- .container -->
+<!-- button to add new company ends here -->
+<br />
+<!-- each company card -->
+<div class="container">
+    <div id="accordion">
+      <div class="card my-3" *ngFor="let item of items | multiple:res">
+        <div class="card-header">
+          <h5 class="mb-0 rowTitle">
+            <button class="btn btn-link" (click)="toggleCardBody($event)">
+              {{ item.CompanyName }}
+            </button>
+            <i class="far fa-edit"></i>
+            <i class="far fa-times-circle"></i>
+          </h5>
+        </div>
+    
+        <div class="collapse show" style="display:none;">
+          <div class="card-body">
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><strong>Account Id:</strong> {{item.AccountId}}</li>
+                  <li class="list-group-item"><strong>Company Id:</strong> {{item.CompanyID}}</li>
+                  <li class="list-group-item"><strong>Company Name:</strong> {{item.CompanyName}}</li>
+                  <li class="list-group-item"><strong>Country:</strong> {{item.Country}}</li>
+                  <li class="list-group-item"><strong>State:</strong> {{item.State}}</li>
+                  <li class="list-group-item"><strong>City:</strong> {{item.City}}</li>
+                  <li class="list-group-item"><strong>Address:</strong> {{item.StreetAddress}}</li>
+                  <li class="list-group-item"><strong>Zipcode:</strong> {{item.ZipCode}}</li>
+                </ul>
+          </div>
+          <div class="card-footer" *ngFor="let contact of item.Contacts">
+            <button class="btn btn-info" (click)="toggleContacts($event)">Contacts</button>
+            <div class="collapse show" style="display: none;">
+                <table class="table table-responsive my-2">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">CompanyId</th>
+                        <th scope="col">FirstName</th>
+                        <th scope="col">LastName</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">ContactState</th>
+                        <th scope="col">ContactCity</th>
+                        <th scope="col">ContactAddress</th>
+                        <th scope="col">ContactZip</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">{{contact.ContactId}}</th>
+                        <td>{{contact.firstname}}</td>
+                        <td>{{contact.LastName}}</td>
+                        <td>{{contact.email}}</td>
+                        <td>{{contact.PrimaryPhone}}</td>
+                        <td>{{contact.ContactState}}</td>
+                        <td>{{contact.ContactCity}}</td>
+                        <td>{{contact.ContactAddress}}</td>
+                        <td>{{contact.ContactZip}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+        </div>
+      </div><!-- .card -->
+    </div><!-- #accordion -->
+  </div><!-- .container -->
+<!-- each company card ends here -->

@@ -1,0 +1,26 @@
+.card-header h5.mb-0.rowTitle {
+    position: relative;
+}
+
+.card-header h5.mb-0.rowTitle svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.card-header h5.mb-0.rowTitle svg:nth-child(2) {
+    right: 0px;
+}
+
+.card-header h5.mb-0.rowTitle svg:nth-child(3) {
+    right: 35px;
+}
+
+.card-header h5.mb-0.rowTitle svg:nth-child(2):hover {
+    color: #00B57A;
+}
+
+.card-header h5.mb-0.rowTitle svg:nth-child(3):hover {
+    color: red;
+}
