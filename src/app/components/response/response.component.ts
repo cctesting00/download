@@ -111,4 +111,9 @@ showForm = false;
     this.showForm = false;
   }
 
+  // get companyId and send http delete company
+  deleteCompany(id) {
+    window.location.reload();
+  }
+
 }

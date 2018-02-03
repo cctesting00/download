@@ -13,4 +13,8 @@ export class JsonService {
   addPost(company) {
     return this.http.post('http://devapp.telenotes.com/api/data/luiscoello', company);
   }
+
+  deletePost(companyId) {
+    return this.http.delete('http://devapp.telenotes.com/api/data/luiscoello' + companyId);
+  }
 }
