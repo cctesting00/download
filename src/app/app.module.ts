@@ -12,6 +12,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
 import { MultiplePipe } from './pipes/multiple.pipe';
+import { AddCompanyComponent } from './components/add-company/add-company.component';
+import { EditCompanyComponent } from './components/edit-company/edit-company.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { MultiplePipe } from './pipes/multiple.pipe';
     ResponseComponent,
     NavComponent,
     FilterPipe,
-    MultiplePipe
+    MultiplePipe,
+    AddCompanyComponent,
+    EditCompanyComponent
   ],
   imports: [
     BrowserModule,

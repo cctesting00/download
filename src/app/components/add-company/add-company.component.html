@@ -1,0 +1,92 @@
+<br />
+<!-- add new company form starts here -->
+<div class="container">
+    <form [formGroup]="companyForm" (submit)="addTheCompany($event)">
+      <input id="readOnly" class="form-control my-2" type="text" placeholder="Company Section" readonly>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label>account id:</label>
+          <input type="number" class="form-control" formControlName="accountId">
+        </div>
+        <div class="form-group col-md-6">
+          <label>company id:</label>
+          <input type="number" class="form-control" formControlName="companyId">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label>country:</label>
+          <input type="text" class="form-control" formControlName="country">
+        </div>
+        <div class="form-group col-md-6">
+          <label>state:</label>
+          <input type="text" class="form-control" formControlName="state">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label>city:</label>
+          <input type="text" class="form-control" formControlName="city">
+        </div>
+        <div class="form-group col-md-6">
+          <label>address:</label>
+          <input type="text" class="form-control" formControlName="address">
+        </div>
+      </div>
+      <div class="row">
+      <div class="form-group col-md-6">
+        <label>zipcode:</label>
+        <input type="text" class="form-control" formControlName="zipcode">
+      </div>
+      </div>
+      <input id="readOnly" class="form-control my-2" type="text" placeholder="Contact Section" readonly>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label>contact id:</label>
+          <input type="number" class="form-control" formControlName="contactId">
+        </div>
+        <div class="form-group col-md-6">
+          <label>first name:</label>
+          <input type="text" class="form-control" formControlName="firstName">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label>last name:</label>
+          <input type="text" class="form-control" formControlName="lastName">
+        </div>
+        <div class="form-group col-md-6">
+          <label>email:</label>
+          <input type="email" class="form-control" formControlName="email">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label>primary phone:</label>
+          <input type="text" class="form-control" formControlName="primaryPhone">
+        </div>
+        <div class="form-group col-md-6">
+          <label>contact state:</label>
+          <input type="text" class="form-control" formControlName="contactState">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label>contact city:</label>
+          <input type="text" class="form-control" formControlName="contactCity">
+        </div>
+        <div class="form-group col-md-6">
+            <label>contact address:</label>
+            <input type="text" class="form-control" formControlName="contactAddress">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+            <label>contact zipcode:</label>
+            <input type="text" class="form-control" formControlName="contactZipcode">
+        </div>
+      </div>
+        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-warning mx-2" (click)="goBackPlease()">Cancel</button>
+      </form>
+  </div>
