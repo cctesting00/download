@@ -9,4 +9,8 @@ export class JsonService {
   getResponse() {
     return this.http.get('assets/test.json');
   }
+
+  addPost(company) {
+    return this.http.post('http://devapp.telenotes.com/api/data/luiscoello', company);
+  }
 }

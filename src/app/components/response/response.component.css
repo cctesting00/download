@@ -24,3 +24,8 @@
 .card-header h5.mb-0.rowTitle svg:nth-child(3):hover {
     color: red;
 }
+
+input#readOnly {
+    border: none;
+    border-radius: 0px;
+}
