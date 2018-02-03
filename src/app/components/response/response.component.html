@@ -115,8 +115,8 @@
             <button class="btn btn-link" (click)="toggleCardBody($event)">
               {{ item.CompanyName }}
             </button>
-            <i class="far fa-edit"></i>
-            <i class="far fa-times-circle"></i>
+            <a><i class="far fa-edit"></i></a>
+            <a (click)="deleteCompany(item.CompanyID)"><i class="far fa-times-circle"></i></a>
           </h5>
         </div>
     
