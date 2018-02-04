@@ -59,11 +59,7 @@ companyForm: FormGroup;
         contactAddress: this.companyForm.get('contactAddress').value,
         contactZipcode: this.companyForm.get('contactZipcode').value
       };
-      // for loop, map, filter
-      // return new filtered API response
-      // display it on the view
-      const p = JSON.stringify(payload);
-      this.js.addPost(p).subscribe(data => console.log(data));
+      this.js.addPost(payload).subscribe(data => console.log(data));
       this.companyForm.reset();
     }
 

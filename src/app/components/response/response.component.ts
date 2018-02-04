@@ -65,7 +65,8 @@ showForm = false;
     const del = {
       CompanyID: id
     };
-    this.js.deletePost(del).subscribe(data => console.log(data));
+    this.js.deletePost(del);
+    window.location.reload();
   }
 
   // add company
