@@ -10,18 +10,14 @@ import { Router } from '@angular/router';
 })
 export class EditCompanyComponent implements OnInit {
 companyForm: FormGroup;
-edit = [];
+edit: any = [];
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.edit.push(params);
-      for (let i = 0; i < this.edit[0].Contacts.length; i++) {
-        console.log(this.edit[0].Contacts[i]);
-      }
+      console.log(params);
     });
-    console.log(this.edit);
     this.createCompanyForm();
     this.companyForm.setValue({
       accountId: this.edit[0].AccountId,

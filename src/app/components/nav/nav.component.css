@@ -1,0 +1,20 @@
+#freeTrial {
+    background: #00B57A;
+    color: #fff;
+    margin: 0px 5px;
+    padding: 5px;
+}
+
+#signIn {
+    background: #625E72;
+    color: #fff;
+    margin: 0px 5px;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 991px) {
+    #freeTrial,
+    #signIn {
+        margin: 5px 0px;
+    }
+}

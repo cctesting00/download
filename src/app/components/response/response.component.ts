@@ -62,8 +62,10 @@ showForm = false;
 
   // get companyId and send http delete company
   deleteCompany(id) {
-    this.js.deletePost(id).subscribe(data => console.log(data));
-    window.location.reload();
+    const del = {
+      CompanyID: id
+    };
+    this.js.deletePost(del).subscribe(data => console.log(data));
   }
 
   // add company
@@ -73,7 +75,7 @@ showForm = false;
 
   // edit company
   editCompanyPlease(item) {
-    this.router.navigate(['/edit', item]);
+  this.router.navigate(['/edit', item]);
   }
 
 }
