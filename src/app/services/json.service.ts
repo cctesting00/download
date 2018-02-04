@@ -1,8 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Headers, RequestOptions } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class JsonService {
+options;
+
+  createAuthHeaders() {
+    this.options = new RequestOptions({
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    });
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -11,10 +21,12 @@ export class JsonService {
   }
 
   addPost(company) {
-    return this.http.post('http://devapp.telenotes.com/api/data/luiscoello', company);
+    this.createAuthHeaders();
+    return this.http.post('http://devapp.telenotes.com/api/data/luiscoello', company, this.options);
   }
 
   deletePost(companyId) {
-    return this.http.delete('http://devapp.telenotes.com/api/data/luiscoello' + companyId);
+    this.createAuthHeaders();
+    return this.http.delete('http://devapp.telenotes.com/api/data/luiscoello' + companyId, this.options);
   }
 }

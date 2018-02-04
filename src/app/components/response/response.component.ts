@@ -73,7 +73,7 @@ showForm = false;
 
   // edit company
   editCompanyPlease(item) {
-    this.router.navigate(['/edit', item]);
+  this.router.navigate(['/edit', i]);
   }
 
 }
