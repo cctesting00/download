@@ -27,6 +27,6 @@ options;
 
   deletePost(companyId) {
     this.createAuthHeaders();
-    return this.http.delete('http://devapp.telenotes.com/api/data/luiscoello' + companyId, this.options);
+    return this.http.delete('http://devapp.telenotes.com/api/data/luiscoello/' + companyId, this.options);
   }
 }
