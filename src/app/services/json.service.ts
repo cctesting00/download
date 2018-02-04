@@ -22,7 +22,8 @@ options;
 
   addPost(company) {
     this.createHeaders();
-    return this.http.post('http://devapp.telenotes.com/api/data/luiscoello', company, this.options);
+    const body = JSON.stringify(company);
+    return this.http.post('http://devapp.telenotes.com/api/data/luiscoello', body, this.options);
   }
 
   deletePost(companyId) {
